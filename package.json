@@ -1,5 +1,5 @@
 {
-  "name": "@rpiulyk/recordrtc",
+  "name": "recordrtc-ponyfill",
   "preferGlobal": false,
   "version": "1.0.0",
   "author": {
