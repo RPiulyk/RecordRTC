@@ -1,6 +1,6 @@
 'use strict';
 
-// Last time updated: 2020-05-17 5:04:38 PM UTC
+var { ReadableStream, WritableStream } = require('web-streams-polyfill/ponyfill');
 
 // ________________
 // RecordRTC v5.6.1
