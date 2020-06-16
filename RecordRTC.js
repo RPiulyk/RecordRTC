@@ -5983,9 +5983,11 @@ function WebAssemblyRecorder(stream, config) {
                 var first = true;
                 video.srcObject = stream;
                 video.muted = true;
+                video.playsInline = true;
                 video.height = config.height;
                 video.width = config.width;
                 video.volume = 0;
+                video.autoplay = true;
                 video.onplaying = function() {
                     cvs.width = config.width;
                     cvs.height = config.height;
