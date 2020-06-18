@@ -5979,17 +5979,17 @@ function WebAssemblyRecorder(stream, config) {
         return new ReadableStream({
             start: function(controller) {
                 var cvs = document.createElement('canvas');
-                var video = config.videoTagId ? document.getElementById(config.videoTagId) : document.createElement('video');
-                if (!config.videoTagId) {
+                var video = config.videoElement || document.createElement('video');
+                if (!config.videoElement) {
                     video.height = config.height;
                     video.width = config.width;
+                    video.muted = true;
+                    video.playsInline = true;
+                    video.volume = 0;
+                    video.autoplay = true;
                 }
-                var first = true;
                 video.srcObject = stream;
-                video.muted = true;
-                video.playsInline = true;
-                video.volume = 0;
-                video.autoplay = true;
+                var first = true;
                 video.onplaying = function() {
                     cvs.width = config.width;
                     cvs.height = config.height;
